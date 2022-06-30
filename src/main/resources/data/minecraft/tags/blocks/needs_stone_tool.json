@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "decometal:example_block"
+    "decometal:example_block",
+    "decometal:example_slab"
   ]
 }

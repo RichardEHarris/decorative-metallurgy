@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "type=bottom": { "model": "decometal:block/example_slab" },
+    "type=double": { "model": "decometal:block/example_block" },
+    "type=top": { "model": "decometal:block/example_slab_top" }
+  }
+}
