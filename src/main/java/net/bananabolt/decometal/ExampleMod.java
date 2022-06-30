@@ -32,7 +32,7 @@ public class ExampleMod implements ModInitializer {
 	public void onInitialize() {
 
 		//Blocks
-		newBlockFactory("example", Material.METAL, 1.0f, true,true, true, false, false);
+		newBlockFactory("example", Material.METAL, 1.0f, true,true, true, true, true);
 		LOGGER.info("Decorative Metal Initialized.");
 	}
 
@@ -49,8 +49,8 @@ public class ExampleMod implements ModInitializer {
 		}
 		if (do_stair) {
 			Block new_stair = requires_tool ? new StairsBlock(new_block.getDefaultState() ,FabricBlockSettings.of(material).strength(block_strength).requiresTool()) : new StairsBlock(new_block.getDefaultState() ,FabricBlockSettings.of(material).strength(block_strength));
-			Registry.register(Registry.BLOCK, new Identifier(namespace, block_name+"_stair"), new_stair);
-			Registry.register(Registry.ITEM, new Identifier(namespace, block_name+"_stair"), new BlockItem(new_stair, new FabricItemSettings().group(ItemGroup.MISC)));
+			Registry.register(Registry.BLOCK, new Identifier(namespace, block_name+"_stairs"), new_stair);
+			Registry.register(Registry.ITEM, new Identifier(namespace, block_name+"_stairs"), new BlockItem(new_stair, new FabricItemSettings().group(ItemGroup.MISC)));
 		}
 		/*if (do_wall) {
 			Registry.register(Registry.BLOCK, new Identifier(namespace, block_name+"_wall"), block);

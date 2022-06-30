@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "decometal:block/example_block",
+    "top": "decometal:block/example_block",
+    "side": "decometal:block/example_block"
+  }
+}
