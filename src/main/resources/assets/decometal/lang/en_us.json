@@ -1,5 +1,6 @@
 {
   "block.decometal.example_block": "Example Block",
   "block.decometal.example_slab": "Example Slab",
-  "block.decometal.example_stairs": "Example Stairs"
+  "block.decometal.example_stairs": "Example Stairs",
+  "block.decometal.example_wall": "Example Wall"
 }

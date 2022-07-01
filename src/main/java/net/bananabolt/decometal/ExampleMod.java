@@ -30,9 +30,11 @@ public class ExampleMod implements ModInitializer {
 	//public static final Block EXAMPLE_BLOCK = new Block(FabricBlockSettings.of(Material.METAL).strength(1.0f).requiresTool());
 	@Override
 	public void onInitialize() {
-
+		//TODO Add Gradle task to auto make the json files
 		//Blocks
 		newBlockFactory("example", Material.METAL, 1.0f, true,true, true, true, true);
+		//TODO More blocks
+
 		LOGGER.info("Decorative Metal Initialized.");
 	}
 
