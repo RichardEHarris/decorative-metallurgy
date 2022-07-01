@@ -37,25 +37,34 @@ public class ExampleMod implements ModInitializer {
 	}
 
 	private void newBlockFactory(String block_name, Material material, Float block_strength, boolean requires_tool, boolean do_block, boolean do_slab, boolean do_stair, boolean do_wall) {
-		Block new_block  = requires_tool ? new Block(FabricBlockSettings.of(material).strength(block_strength).requiresTool()) : new Block(FabricBlockSettings.of(material).strength(block_strength));
+		Block new_block  = requires_tool ?
+				new Block(FabricBlockSettings.of(material).strength(block_strength).requiresTool()) :
+				new Block(FabricBlockSettings.of(material).strength(block_strength));
 		if (do_block) {
 			Registry.register(Registry.BLOCK, new Identifier(namespace, block_name+"_block"), new_block);
-			Registry.register(Registry.ITEM, new Identifier(namespace, block_name+"_block"), new BlockItem(new_block, new FabricItemSettings().group(ItemGroup.MISC)));
+			Registry.register(Registry.ITEM, new Identifier(namespace, block_name+"_block"), new BlockItem(new_block, new FabricItemSettings().group(ItemGroup.BUILDING_BLOCKS)));
 		}
 		if (do_slab) {
-			Block new_slab = requires_tool ? new SlabBlock(FabricBlockSettings.of(material).strength(block_strength).requiresTool()) : new SlabBlock(FabricBlockSettings.of(material).strength(block_strength));
+			Block new_slab = requires_tool ?
+					new SlabBlock(FabricBlockSettings.of(material).strength(block_strength).requiresTool()) :
+					new SlabBlock(FabricBlockSettings.of(material).strength(block_strength));
 			Registry.register(Registry.BLOCK, new Identifier(namespace, block_name+"_slab"), new_slab);
-			Registry.register(Registry.ITEM, new Identifier(namespace, block_name+"_slab"), new BlockItem(new_slab, new FabricItemSettings().group(ItemGroup.MISC)));
+			Registry.register(Registry.ITEM, new Identifier(namespace, block_name+"_slab"), new BlockItem(new_slab, new FabricItemSettings().group(ItemGroup.BUILDING_BLOCKS)));
 		}
 		if (do_stair) {
-			Block new_stair = requires_tool ? new StairsBlock(new_block.getDefaultState() ,FabricBlockSettings.of(material).strength(block_strength).requiresTool()) : new StairsBlock(new_block.getDefaultState() ,FabricBlockSettings.of(material).strength(block_strength));
+			Block new_stair = requires_tool ?
+					new StairsBlock(new_block.getDefaultState() ,FabricBlockSettings.of(material).strength(block_strength).requiresTool()) :
+					new StairsBlock(new_block.getDefaultState() ,FabricBlockSettings.of(material).strength(block_strength));
 			Registry.register(Registry.BLOCK, new Identifier(namespace, block_name+"_stairs"), new_stair);
-			Registry.register(Registry.ITEM, new Identifier(namespace, block_name+"_stairs"), new BlockItem(new_stair, new FabricItemSettings().group(ItemGroup.MISC)));
+			Registry.register(Registry.ITEM, new Identifier(namespace, block_name+"_stairs"), new BlockItem(new_stair, new FabricItemSettings().group(ItemGroup.BUILDING_BLOCKS)));
 		}
-		/*if (do_wall) {
-			Registry.register(Registry.BLOCK, new Identifier(namespace, block_name+"_wall"), block);
-			Registry.register(Registry.ITEM, new Identifier(namespace, block_name+"_wall"), new BlockItem(block, new FabricItemSettings().group(ItemGroup.MISC)));
-		}*/
+		if (do_wall) {
+			Block new_wall = requires_tool ?
+					new WallBlock(FabricBlockSettings.of(material).strength(block_strength).requiresTool()) :
+					new WallBlock(FabricBlockSettings.of(material).strength(block_strength));
+			Registry.register(Registry.BLOCK, new Identifier(namespace, block_name+"_wall"), new_wall);
+			Registry.register(Registry.ITEM, new Identifier(namespace, block_name+"_wall"), new BlockItem(new_wall, new FabricItemSettings().group(ItemGroup.BUILDING_BLOCKS)));
+		}
 	}
 
 }
