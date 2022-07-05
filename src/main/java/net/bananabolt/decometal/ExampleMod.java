@@ -10,13 +10,15 @@ import net.minecraft.util.registry.Registry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.ArrayList;
+
 public class ExampleMod implements ModInitializer {
 	// This logger is used to write text to the console and the log file.
 	// It is considered best practice to use your mod id as the logger's name.
 	// That way, it's clear which mod wrote info, warnings, and errors.
 	public static final String namespace = "decometal";
 	public static final Logger LOGGER = LoggerFactory.getLogger(namespace);
-
+	public ArrayList<String> registered = new ArrayList<>();
 	/* Declare and initialize our custom block instance.
        We set our block material to `METAL`, which requires a pickaxe to efficiently break.
 
@@ -33,8 +35,8 @@ public class ExampleMod implements ModInitializer {
 
 		//Blocks
 		newBlockFactory("example", Material.METAL, 1.0f, true,true, true, true, true);
+		newBlockFactory("steel_panel", Material.METAL, 2.0f, true,true, true, true, true);
 		//TODO More blocks
-		//newBlockFactory("steel_panel", Material.METAL, 2.0f, true,true, true, true, true);
 		LOGGER.info("Decorative Metal Initialized.");
 	}
 
@@ -42,6 +44,7 @@ public class ExampleMod implements ModInitializer {
 		Block new_block  = requires_tool ?
 				new Block(FabricBlockSettings.of(material).strength(block_strength).requiresTool()) :
 				new Block(FabricBlockSettings.of(material).strength(block_strength));
+		registered.add(block_name);
 		if (do_block) {
 			Registry.register(Registry.BLOCK, new Identifier(namespace, block_name+"_block"), new_block);
 			Registry.register(Registry.ITEM, new Identifier(namespace, block_name+"_block"), new BlockItem(new_block, new FabricItemSettings().group(ItemGroup.BUILDING_BLOCKS)));

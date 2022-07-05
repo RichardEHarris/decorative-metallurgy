@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "decometal:example_wall"
+          "name": "decometal:steel_panel_wall"
         }
       ],
       "conditions": [

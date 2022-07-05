@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "type=bottom": { "model": "decometal:block/steel_panel_slab" },
+    "type=double": { "model": "decometal:block/steel_panel_block" },
+    "type=top": { "model": "decometal:block/steel_panel_slab_top" }
+  }
+}
