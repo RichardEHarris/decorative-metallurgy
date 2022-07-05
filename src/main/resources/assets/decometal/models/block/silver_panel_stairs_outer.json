@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "decometal:block/silver_panel_block",
+    "top": "decometal:block/silver_panel_block",
+    "side": "decometal:block/silver_panel_block"
+  }
+}

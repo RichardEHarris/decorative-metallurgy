@@ -1,5 +1,10 @@
 {
   "values": [
-    "decometal:example_wall"
+    "decometal:example_wall",
+    "decometal:steel_panel_wall",
+    "decometal:brass_panel_wall",
+    "decometal:gold_panel_wall",
+    "decometal:tungsten_panel_wall",
+    "decometal:silver_panel_wall"
   ]
 }

@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "decometal:block/silver_panel_block"
+  }
+}

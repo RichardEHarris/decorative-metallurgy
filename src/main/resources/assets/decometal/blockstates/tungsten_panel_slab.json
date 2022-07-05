@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "type=bottom": { "model": "decometal:block/tungsten_panel_slab" },
+    "type=double": { "model": "decometal:block/tungsten_panel_block" },
+    "type=top": { "model": "decometal:block/tungsten_panel_slab_top" }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "decometal:block/tungsten_panel_block",
+    "top": "decometal:block/tungsten_panel_block",
+    "side": "decometal:block/tungsten_panel_block"
+  }
+}

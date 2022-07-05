@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "decometal:block/brass_panel_block",
+    "top": "decometal:block/brass_panel_block",
+    "side": "decometal:block/brass_panel_block"
+  }
+}
