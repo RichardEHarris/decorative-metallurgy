@@ -40,6 +40,7 @@ public class ExampleMod implements ModInitializer {
 		newBlockFactory("gold_panel", Material.METAL, 2.0f, true,true, true, true, true);
 		newBlockFactory("tungsten_panel", Material.METAL, 2.0f, true,true, true, true, true);
 		newBlockFactory("silver_panel", Material.METAL, 2.0f, true,true, true, true, true);
+		newBlockFactory("cobalt_panel", Material.METAL, 2.0f, true,true, true, true, true);
 		//TODO More blocks
 		LOGGER.info("Decorative Metal Initialized.");
 	}
